@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join CodingGita 🎓 – Student Application + Internet Survey</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: auto; padding: 20px;">
+
+  <h1 style="color: #2b6cb0;">✨ Welcome Future Coder!</h1>
+  <p>Hey there 👋 We’re so glad you’re applying to <strong>CodingGita University</strong>.  
+  This form isn’t just about admission — it’s also about understanding how you use the internet.  
+  Relax, take 5 minutes, and fill it in like you’re chatting with us 😊.</p>
+
+  <form action="#" method="post">
+
+    <!-- About You -->
+    <fieldset>
+      <legend>👤 About You</legend>
+
+      <label for="fullName">👉 What’s your full name?</label><br>
+      <input type="text" id="fullName" name="fullName" placeholder="e.g., Priya Sharma" required><br><br>
+
+      <label for="email">📧 Your best email:</label><br>
+      <input type="email" id="email" name="email" placeholder="name@email.com" required><br><br>
+
+      <label for="phoneNumber">📞 Your phone number:</label><br>
+      <input type="number" id="phoneNumber" name="phoneNumber" placeholder="9876543210" required><br><br>
+
+      <label for="dob">🎂 When’s your birthday?</label><br>
+      <input type="date" id="dob" name="dob"><br><br>
+
+      <label>⚧ How do you identify?</label><br>
+      <input type="radio" name="gender" value="male"> Male  
+      <input type="radio" name="gender" value="female"> Female  
+      <input type="radio" name="gender" value="other"> Other<br><br>
+
+      <label for="photo">🖼️ Upload a recent photo (JPG/PNG):</label><br>
+      <input type="file" id="photo" name="photo" accept="image/jpeg, image/png"><br><br>
+    </fieldset><br>
+
+    <!-- Studies -->
+    <fieldset>
+      <legend>📚 Your Studies</legend>
+
+      <label for="qualification">🎓 What’s your highest qualification?</label><br>
+      <select id="qualification" name="qualification">
+        <option value="high_school">High School</option>
+        <option value="bachelor">Bachelor’s</option>
+        <option value="master">Master’s</option>
+        <option value="phd">Ph.D.</option>
+      </select><br><br>
+
+      <label for="cgpa">📊 Your Percentage/CGPA:</label><br>
+      <input type="number" id="cgpa" name="cgpa" min="0" max="100" placeholder="e.g., 85.5"><br><br>
+
+      <label for="preferredCourse">🚀 Which course excites you most?</label><br>
+      <select id="preferredCourse" name="preferredCourse">
+        <option value="mern">MERN Stack</option>
+        <option value="dsa">DSA Bootcamp</option>
+        <option value="ai_ml">AI/ML</option>
+        <option value="webdev">Web Development</option>
+        <option value="cloud">Cloud Computing</option>
+      </select><br><br>
+    </fieldset><br>
+
+    <!-- Internet Life -->
+    <fieldset>
+      <legend>🌐 Your Internet Life</legend>
+
+      <label>💻 Do you have internet access?</label><br>
+      <input type="radio" name="internetAccess" value="yes"> Yes  
+      <input type="radio" name="internetAccess" value="no"> No<br><br>
+
+      <label>📱 Devices you use every day:</label><br>
+      <input type="checkbox" name="devices[]" value="laptop"> Laptop  
+      <input type="checkbox" name="devices[]" value="mobile"> Mobile  
+      <input type="checkbox" name="devices[]" value="tablet"> Tablet  
+      <input type="checkbox" name="devices[]" value="desktop"> Desktop<br><br>
+
+      <label for="dailyUsage">🕒 Average daily internet use:</label><br>
+      <select id="dailyUsage" name="dailyUsage">
+        <option value="less_1">Less than 1 hour</option>
+        <option value="1_3">1–3 hours</option>
+        <option value="3_6">3–6 hours</option>
+        <option value="6_plus">6+ hours 😅</option>
+      </select><br><br>
+
+      <label>💡 Skills you already know:</label><br>
+      <input type="checkbox" name="skills[]" value="html"> HTML  
+      <input type="checkbox" name="skills[]" value="css"> CSS  
+      <input type="checkbox" name="skills[]" value="js"> JavaScript  
+      <input type="checkbox" name="skills[]" value="react"> React  
+      <input type="checkbox" name="skills[]" value="git"> Git<br><br>
+    </fieldset><br>
+
+    <!-- Wrap Up -->
+    <fieldset>
+      <legend>✅ Wrap Up</legend>
+
+      <label for="whyJoin">🌟 Why do you want to join CodingGita?</label><br>
+      <textarea id="whyJoin" name="whyJoin" rows="4" cols="50" placeholder="Write your motivation in 2–3 lines..."></textarea><br><br>
+
+      <input type="checkbox" id="declaration" name="declaration" required>
+      <label for="declaration">I promise all info shared here is true 🙏</label><br><br>
+
+      <input type="submit" value="🚀 Submit Application" style="background:#2b6cb0; color:#fff; padding:10px 20px; border:none; border-radius:8px; cursor:pointer;">
+      <input type="reset" value="🧹 Clear Form" style="margin-left:10px; padding:10px 20px; border:1px solid #ccc; border-radius:8px; cursor:pointer;">
+    </fieldset>
+  </form>
+
+  <p style="margin-top:20px; font-size:14px; color:#555;">💡 Tip: If you’re unsure about any field, just take your best guess. We’re here to help, not judge!</p>
+
+</body>
+</html>

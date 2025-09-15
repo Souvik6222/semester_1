@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Media Library</title>
+</head>
+<body id="top">
+
+    <h1>Media Library Collection</h1>
+    <p>
+        Welcome to my little media corner!  
+        Here I’ve saved some of my favorite photos, songs I keep looping, 
+        videos I enjoy rewatching, and a few embeds that inspire me.  
+        Hope you enjoy scrolling through my collection.
+    </p>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#images">Images</a> | 
+        <a href="#audio">Audio</a> | 
+        <a href="#video">Video</a> | 
+        <a href="#embeds">Embeds</a>
+    </nav>
+    <hr>
+
+    <!-- Image Gallery -->
+    <section id="images">
+        <h2>My Favorite Images</h2>
+        
+        <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Taj_Mahal_in_March_2004.jpg" 
+                 alt="Taj Mahal" title="Taj Mahal at sunrise" width="300">
+            <figcaption>Woke up early to see the Taj Mahal at sunrise—worth every minute.</figcaption>
+        </figure>
+
+        <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg" 
+                 alt="Himalayas" title="Himalayan Mountains" width="300">
+            <figcaption>Nothing feels more peaceful than the Himalayan silence.</figcaption>
+        </figure>
+
+        <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg" 
+                 alt="Eiffel Tower" title="Eiffel Tower in Paris" width="300">
+            <figcaption>A photo from my first trip to Paris—the Eiffel Tower glowing at night.</figcaption>
+        </figure>
+
+        <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Machu_Picchu%2C_Peru.jpg" 
+                 alt="Machu Picchu" title="Machu Picchu in Peru" width="300">
+            <figcaption>Dream come true: standing on top of Machu Picchu, Peru.</figcaption>
+        </figure>
+
+        <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Grand_Canyon_Hopi_Point.jpg" 
+                 alt="Grand Canyon" title="Grand Canyon in USA" width="300">
+            <figcaption>Photos don’t do justice—the Grand Canyon is breathtaking in real life.</figcaption>
+        </figure>
+
+        <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Colosseo_2020.jpg" 
+                 alt="Colosseum" title="Colosseum in Rome" width="300">
+            <figcaption>The Colosseum in Rome… history you can almost touch.</figcaption>
+        </figure>
+    </section>
+    <hr>
+
+    <!-- Audio Section -->
+    <section id="audio">
+        <h2>Music That Keeps Me Going</h2>
+
+        <p><strong>Song 1 (Autoplay):</strong> This one always lifts my mood when I’m working.</p>
+        <audio controls autoplay>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <p><strong>Song 2 (Loop):</strong> I love this so much, I keep it looping in the background.</p>
+        <audio controls loop>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <p><strong>Song 3:</strong> A calm track I play when I just want to relax.</p>
+        <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+    <hr>
+
+    <!-- Video Section -->
+    <section id="video">
+        <h2>Videos I Love</h2>
+
+        <figure>
+            <video width="400" height="250" controls poster="https://www.w3schools.com/html/pic_trulli.jpg">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <figcaption>A short demo of me coding and explaining my thought process.</figcaption>
+        </figure>
+
+        <figure>
+            <video width="400" height="250" controls poster="https://www.w3schools.com/html/img_girl.jpg">
+                <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+                <track src="captions.vtt" kind="subtitles" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            <figcaption>This explainer video has subtitles—perfect for when I can’t turn the volume up.</figcaption>
+        </figure>
+    </section>
+    <hr>
+
+    <!-- External Embeds -->
+    <section id="embeds">
+        <h2>Things I’ve Embedded</h2>
+
+        <h3>YouTube Video</h3>
+        <p>This video always motivates me when I’m feeling stuck.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                title="YouTube video player" frameborder="0" allowfullscreen>
+        </iframe>
+
+        <h3>Google Map</h3>
+        <p>Here’s the location of the CodingGita campus I found interesting.</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.806702297329!2d72.83392761532714!3d19.076090987089727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b62f3fd0d1f9%3A0xdeb5d3657c1d6a9f!2sCodingGita!5e0!3m2!1sen!2sin!4v1630150112345" 
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+
+        <h3>Wikipedia Snippet</h3>
+        <p>I often read about the Taj Mahal when I need a reminder of timeless beauty.</p>
+        <iframe src="https://en.wikipedia.org/wiki/Taj_Mahal" width="600" height="400"></iframe>
+    </section>
+    <hr>
+
+    <!-- Back to Top -->
+    <p><a href="#top">⬆ Back to Top</a></p>
+
+</body>
+</html>
