@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedding External Content</title>
+</head>
+<body>
+
+    <h1>Embedding Content in HTML</h1>
+    <p>This page shows how to embed videos, articles, and maps directly into an HTML document.</p>
+
+    <!-- Navigation Links -->
+    <p>
+        <a href="#youtube">YouTube</a> |
+        <a href="#wikipedia">Wikipedia</a> |
+        <a href="#maps">Google Maps</a>
+    </p>
+
+    <!-- Section 1: YouTube -->
+    <h2 id="youtube">YouTube Video</h2>
+    <p>Here is a coding tutorial video from YouTube:</p>
+    <iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/pQN-pnXPaVg" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+    <p>Description: This video explains HTML basics.</p>
+
+    <hr>
+
+    <!-- Section 2: Wikipedia -->
+    <h2 id="wikipedia">Wikipedia Article</h2>
+    <p>Here is a Wikipedia article about Computer Science:</p>
+    <iframe src="https://en.wikipedia.org/wiki/Computer_science" 
+        width="100%" height="400" 
+        frameborder="0">
+    </iframe>
+    <p>Description: This iframe displays the Computer Science article.</p>
+
+    <hr>
+
+    <!-- Section 3: Google Maps -->
+    <h2 id="maps">Google Maps Location</h2>
+    <p>Here is the location of CodingGita Campus:</p>
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.772079391247!2d72.50316511427356!3d23.02049738495654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84f6cf39b9b9%3A0xced4b327cccfa11f!2sCoding%20Gita!5e0!3m2!1sen!2sin!4v1694514633543!5m2!1sen!2sin" 
+        width="600" height="450"  
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    <p>Description: This is where CodingGita students learn modern MERN stack development.</p>
+
+    <hr>
+
+    <!-- Footer -->
+    <p><a href="#top">Back to Top</a></p>
+
+</body>
+</html>
