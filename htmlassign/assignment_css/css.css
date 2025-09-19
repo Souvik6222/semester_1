@@ -1,0 +1,70 @@
+/* ===============================
+   Assignment 1 — CSS Selectors
+   =============================== */
+
+/* 1. Element selector: Style all <p> tags */
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* 2. ID selector: #site-title */
+#site-title {
+  background: #222;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* 3. Class selectors */
+.muted {
+  color: gray;
+}
+
+.highlight {
+  background: #fffa9c;
+  border: 2px solid gold;
+  padding: 5px;
+}
+
+.highlight-text {
+  background: lightblue;
+  padding: 5px;
+}
+
+#override {
+  background: yellow; /* Overrides .highlight-text */
+}
+
+/* 4. Descendant & Child selectors */
+section > h4 {
+  color: darkgreen;
+  font-weight: bold;
+}
+
+section p {
+  color: #444;
+  font-style: italic;
+}
+
+/* 5. Adjacent sibling selector */
+h4 + p {
+  background: #f0f8ff;
+  padding: 8px;
+  border-left: 4px solid blue;
+}
+
+/* 6. Attribute selector: only images with alt */
+img[alt] {
+  border: 3px solid #555;
+}
+
+/* 7. nth-child selector for striped list */
+.striped-list li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+.striped-list li:nth-child(even) {
+  background: #e0e0e0;
+}

@@ -1,0 +1,166 @@
+/* =========================================
+   Assignment 2 — Colors & Backgrounds
+   ========================================= */
+
+/* 1. Base / Body */
+:root {
+  --primary: #1e88e5;
+  --accent: #ff5252;
+  --light: #f9f9f9;
+  --dark: #222;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f5f5f5; /* very light gray */
+  color: var(--dark);
+  margin: 0;
+  line-height: 1.6;
+  padding: 0;
+}
+
+/* optional container */
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* 2. Card base (shared) */
+.card {
+  padding: 1rem;
+  border-radius: 10px;
+  min-height: 140px;
+  margin: 1rem 0;
+  color: white; /* default for darker backgrounds */
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* 3. Solid color card */
+.card.solid {
+  background: var(--primary);
+}
+
+.card.solid .cta {
+  display: inline-block;
+  margin-top: 0.5rem;
+  background: white;
+  color: var(--primary);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* 4. Linear gradient card */
+.card.linear {
+  background: linear-gradient(90deg, #ff8a65, var(--accent));
+}
+
+/* Overlay for readability */
+.card.linear::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+.card.linear * {
+  position: relative; /* keep content above overlay */
+}
+
+/* 5. Radial gradient card */
+.card.radial {
+  background: radial-gradient(circle at top left, #81d4fa, #0288d1);
+}
+
+/* Optional overlay for readability */
+.card.radial::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+}
+.card.radial * {
+  position: relative;
+}
+
+/* 6. Background image demo */
+.bg-demo {
+  background-image: url("http://codinggita.com/wp-content/uploads/placeholder-800x400.png");
+  background-repeat: repeat-x;
+  background-position: center top;
+  background-size: contain;
+  padding: 2rem;
+  border-radius: 10px;
+  color: white;
+  position: relative;
+}
+.bg-demo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+.bg-demo * {
+  position: relative;
+}
+
+/* 7. Cover vs Contain comparison */
+.bg-compare {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.compare {
+  flex: 1;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.compare.cover {
+  background: url("http://codinggita.com/wp-content/uploads/placeholder-800x400.png") center/cover no-repeat;
+}
+.compare.contain {
+  background: url("http://codinggita.com/wp-content/uploads/placeholder-800x400.png") center/contain no-repeat;
+  background-color: #666; /* filler for empty space */
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 720px) {
+  .bg-compare {
+    flex-direction: column;
+  }
+}
+
+/* 8. Parallax / Fixed background demo */
+.parallax {
+  background: url("http://codinggita.com/wp-content/uploads/placeholder-800x400.png") center/cover no-repeat fixed;
+  min-height: 220px;
+  padding: 2rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+/* NOTE: On mobile devices, background-attachment: fixed may be ignored 
+   due to performance and battery constraints. */
+
+/* 9. Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  background: #eee;
+}
