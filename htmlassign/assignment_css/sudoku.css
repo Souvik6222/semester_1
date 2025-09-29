@@ -1,0 +1,52 @@
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 40px;
+      background: #f0f0f0;
+    }
+
+    .sudoku-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(9, 40px);
+      grid-template-rows: repeat(9, 40px);
+      gap: 2px;
+      background: #333;
+      padding: 4px;
+    }
+
+    .cell {
+      background: white;
+      text-align: center;
+      line-height: 40px;
+      font-size: 18px;
+      font-weight: bold;
+      border: 1px solid #ccc;
+    }
+
+    .highlight {
+      background-color: #c8f7c5;
+    }
+
+    /* Thicker borders for 3x3 blocks */
+    .cell:nth-child(3n) {
+      border-right: 2px solid #000;
+    }
+
+    .cell:nth-child(n+19):nth-child(-n+27),
+    .cell:nth-child(n+46):nth-child(-n+54) {
+      border-bottom: 2px solid #000;
+    }
+  

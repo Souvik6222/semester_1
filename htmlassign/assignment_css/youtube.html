@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Clone</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      background: #181818;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+
+    .sidebar {
+      width: 290px;
+      background: #202020;
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      height: 100vh;
+    }
+
+    .sidebar-item {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      padding: 14px 25px;
+      cursor: pointer;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    .sidebar-item img {
+      width: 28px;
+    }
+
+    .sidebar-item:hover {
+      background: #333;
+    }
+
+    .sidebar hr {
+      border: 0;
+      border-top: 1px solid #333;
+      margin: 10px 0;
+    }
+
+
+    .main {
+      margin-left: 280px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 25px;
+      background: #202020;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-left: 10px;
+    }
+
+    .logo img {
+      max-width: 150px;
+      height: 40px;
+      margin-left: 80px;
+    }
+
+    .logo span {
+      color: #fff;
+    }
+
+    .search-bar {
+      flex: 1;
+      max-width: 700px;
+      display: flex;
+      margin: 0 50px;
+    }
+
+    .search-bar input {
+      flex: 1;
+      padding: 14px;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background: #121212;
+      color: #fff;
+      border: 1px solid #333;
+      border-radius: 30px 0 0 30px;
+            margin-left: 25px;
+
+    }
+
+    .search-bar button {
+      background: #333;
+      border: none;
+      padding: 0 25px;
+      cursor: pointer;
+      color: #fff;
+      font-size: 20px;
+      border-radius: 0 30px 30px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .header-right img {
+      width: 34px;
+      cursor: pointer;
+    }
+
+    .header-right .profile {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+    }
+
+
+    .categories {
+      display: flex;
+      overflow-x: auto;
+      background: #202020;
+      padding: 15px;
+      gap: 15px;
+      border-bottom: 1px solid #333;
+    }
+
+    .categories span {
+      background: #333;
+      padding: 10px 20px;
+      border-radius: 22px;
+      font-size: 16px;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    .categories span:hover {
+      background: #555;
+    }
+
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+      padding: 28px;
+    }
+
+    .video {
+      background: #202020;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .video img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+    }
+
+    .video-info {
+      padding: 14px;
+    }
+
+    .video-info h4 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+
+    .video-info p {
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      background-color: #3ea6ff;
+      border-radius: 50%;
+      display: inline-block;
+      margin-left: 2px;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="sidebar">
+    <div class="logo">
+       
+      <img
+        src="https://github.com/kananiyashvi180-svg/CGxSU_Semester_1/blob/main/html_css_js/CSS/00.assignment/02.level_2/08.youtube-clone/assets/Youtube%20logo.png?raw=true"
+        alt="YouTube Logo">
+
+    </div>
+    <div class="sidebar-item">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/home.png" alt="Home">
+      <span>Home</span>
+    </div>
+    <div class="sidebar-item">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/compass.png" alt="Explore">
+      <span>Explore</span>
+    </div>
+    <div class="sidebar-item">
+      <img
+        src="https://github.com/kananiyashvi180-svg/CGxSU_Semester_1/blob/main/html_css_js/CSS/00.assignment/02.level_2/08.youtube-clone/assets/shorts.png?raw=true"
+        alt="Subscriptions">
+      <span>Shorts</span>
+    </div>
+    <div class="sidebar-item">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/video.png" alt="Subscriptions">
+      <span>Subscriptions</span>
+    </div>
+    <hr>
+    <div class="sidebar-item">
+      <img
+        src="https://github.com/kananiyashvi180-svg/CGxSU_Semester_1/blob/main/html_css_js/CSS/00.assignment/02.level_2/08.youtube-clone/assets/library.png?raw=true"
+        alt="Library">
+      <span>Library</span>
+    </div>
+    <div class="sidebar-item">
+      <img
+        src="https://github.com/kananiyashvi180-svg/CGxSU_Semester_1/blob/main/html_css_js/CSS/00.assignment/02.level_2/08.youtube-clone/assets/history.png?raw=true"
+        alt="History">
+      <span>History</span>
+    </div>
+    <div class="sidebar-item">
+      <img
+        src="https://github.com/kananiyashvi180-svg/CGxSU_Semester_1/blob/main/html_css_js/CSS/00.assignment/02.level_2/08.youtube-clone/assets/your_video.png?raw=true"
+        alt="History">
+      <span>Your videos</span>
+    </div>
+    <div class="sidebar-item">
+      <img
+        src="https://github.com/kananiyashvi180-svg/CGxSU_Semester_1/blob/main/html_css_js/CSS/00.assignment/02.level_2/08.youtube-clone/assets/watch_later.png?raw=true"
+        alt="History">
+      <span>Watch later</span>
+    </div>
+
+    <div class="sidebar-item">
+      <img
+        src="https://github.com/kananiyashvi180-svg/CGxSU_Semester_1/blob/main/html_css_js/CSS/00.assignment/02.level_2/08.youtube-clone/assets/liked.png?raw=true"
+        alt="Liked">
+      <span>Liked Videos</span>
+    </div>
+    <div class="sidebar-item">
+      <img
+        src="https://github.com/kananiyashvi180-svg/CGxSU_Semester_1/blob/main/html_css_js/CSS/00.assignment/02.level_2/08.youtube-clone/assets/more.png?raw=true"
+        alt="History">
+      <span>show more</span>
+    </div>
+    <hr>
+    <h2>SUBSCRIPTIONS</h2>
+    <div class="sidebar-item">
+      <img
+        src="https://github.com/kananiyashvi180-svg/CGxSU_Semester_1/blob/main/html_css_js/CSS/00.assignment/02.level_2/08.youtube-clone/assets/Ellipse%201.png?raw=true"
+        alt="History">
+      <span>Nadir On to go <span class="dot"></span></span>
+    </div>
+    <div class="sidebar-item">
+      <img
+        src="https://github.com/kananiyashvi180-svg/CGxSU_Semester_1/blob/main/html_css_js/CSS/00.assignment/02.level_2/08.youtube-clone/assets/Ellipse%201%20(1).png?raw=true"
+        alt="History">
+      <span>Coke studio Bangla <span class="dot"></span></span>
+    </div>
+    <div class="sidebar-item">
+      <img
+        src="https://github.com/kananiyashvi180-svg/CGxSU_Semester_1/blob/main/html_css_js/CSS/00.assignment/02.level_2/08.youtube-clone/assets/Ellipse%201%20(2).png?raw=true"
+        alt="History">
+      <span>MKBHD</span>
+    </div>
+    <div class="sidebar-item">
+      <img
+        src="https://github.com/kananiyashvi180-svg/CGxSU_Semester_1/blob/main/html_css_js/CSS/00.assignment/02.level_2/08.youtube-clone/assets/Ellipse%201%20(3).png?raw=true"
+        alt="History">
+      <span>Figma <span class="dot"></span></span>
+    </div>
+    <div class="sidebar-item">
+      <img
+        src="https://github.com/kananiyashvi180-svg/CGxSU_Semester_1/blob/main/html_css_js/CSS/00.assignment/02.level_2/08.youtube-clone/assets/Ellipse%201%20(4).png?raw=true"
+        alt="History">
+      <span>ATC Android To To...</span>
+    </div>
+    <div class="sidebar-item">
+      <img
+        src="https://github.com/kananiyashvi180-svg/CGxSU_Semester_1/blob/main/html_css_js/CSS/00.assignment/02.level_2/08.youtube-clone/assets/Ellipse%201%20(5).png?raw=true"
+        alt="History">
+      <span>Alux.com <span class="dot"></span></span>
+    </div>
+  </div>
+  </div>
+
+
+  <div class="main">
+
+
+    <div class="header">
+
+
+      <div class="search-bar">
+        <input type="text" placeholder="Search">
+        <button>🔍</button>
+      </div>
+
+      <div class="header-right">
+        <span>≣</span>
+        <img
+          src="https://github.com/kananiyashvi180-svg/CGxSU_Semester_1/blob/main/html_css_js/CSS/00.assignment/02.level_2/08.youtube-clone/assets/create.png?raw=true"
+          alt="Upload">
+        <img
+          src="https://github.com/kananiyashvi180-svg/CGxSU_Semester_1/blob/main/html_css_js/CSS/00.assignment/02.level_2/08.youtube-clone/assets/bell.png?raw=true"
+          alt="Notifications">
+        <img class="profile" src="https://github.com/kananiyashvi180-svg/CGxSU_Semester_1/blob/main/html_css_js/CSS/00.assignment/02.level_2/08.youtube-clone/assets/Ellipse%204%20(5).png?raw=true" alt="Profile">
+      </div>
+    </div>
+
+
+    <div class="categories">
+      <span>All</span>
+
+      <span>Coke Studio</span>
+      <span>UX</span>
+      <span>Case Study</span>
+      <span>Music</span>
+      <span>Bangla Lofi</span>
+      <span>Tour</span>
+      <span>Saintmartin</span>
+      <span>Tech</span>
+      <span>iPhone 13</span>
+      <span>User Interface Design</span>
+      <span>Computer</span>
+    </div>
+
+
+    <div class="video-grid">
+      <div class="video">
+        <img
+          src="https://github.com/kananiyashvi180-svg/CGxSU_Semester_1/blob/main/html_css_js/CSS/00.assignment/02.level_2/08.youtube-clone/assets/Thumbnail-8.png?raw=true"
+          alt="Bulbuli Coke Studio">
+        <div class="video-info">
+          <h4>Bulbuli | Coke Studio Bangla | Season One | Ritu Raj X Nandita</h4>
+          <p> Coke studio Bangla</p> <p> views • 2 days ago</p>
+        </div>
+      </div>
+      <div class="video">
+        <img
+          src="https://github.com/kananiyashvi180-svg/CGxSU_Semester_1/blob/main/html_css_js/CSS/00.assignment/02.level_2/08.youtube-clone/assets/Thumbnail-9.png?raw=true"
+          alt="Infinix Note 12">
+        <div class="video-info">
+          <h4>Infinix Note 12 : AMOLED Helio G88 SoC!</h4>
+          <p>ATC Android To To Company</p>
+          <p>421K views • 2 days ago</p>
+        </div>
+      </div>
+      <div class="video">
+        <img
+          src="https://github.com/kananiyashvi180-svg/CGxSU_Semester_1/blob/main/html_css_js/CSS/00.assignment/02.level_2/08.youtube-clone/assets/Thumbnail-10.png?raw=true"
+          alt="UX Case Study">
+        <div class="video-info">
+          <h4>My First UX Design Case Study-This got me my first job.</h4>
+          <p>Saptarshi Prakash</p>
+          <p>48K views • 1 year ago</p>
+        </div>
+      </div>
+      <div class="video">
+        <img
+          src="https://github.com/kananiyashvi180-svg/CGxSU_Semester_1/blob/main/html_css_js/CSS/00.assignment/02.level_2/08.youtube-clone/assets/Thumbnail-11.png?raw=true"
+          alt="UX Design What is it">
+        <div class="video-info">
+          <h4>My Mix</h4>
+
+          <p>Lopamudra Mitra,Anupam Roy,and more</p>
+        </div>
+      </div>
+      <div class="video">
+        <img src="Youtubethumbnail.jpg" alt="UX Design What is it">
+        <div class="video-info">
+          <h4>UX Design - What is it?(From AJ &Smart)</h4>
+          <p>AJ&Smar</p>
+          <p>150K views • 3 years ago</p>
+        </div>
+      </div>
+      <div class="video">
+        <img
+          src="https://github.com/kananiyashvi180-svg/CGxSU_Semester_1/blob/main/html_css_js/CSS/00.assignment/02.level_2/08.youtube-clone/assets/Thumbnail-5.png?raw=true"
+          alt="UX Design What is it">
+        <div class="video-info">
+          <h4>Mix-Mombati | Mohon Sharif | Dhakaiya dolores| MAhib Ahsan ft Anika</h4>
+          <p>Mohon Sharif,Odd Signature,Shayan Chowdhury Arnob,and more</p>
+          <p>150K views • 3 years ago</p>
+        </div>
+      </div>
+      <div class="video">
+        <img src="youtubethumbnail2.jpg" alt="UX Design What is it">
+        <div class="video-info">
+          <h4>|48VISA-FREE</h4>
+          <p>Nadir On The Go</p>
+          <p>1.7Mviews • 1 year ago </p>
+
+        </div>
+      </div>
+      <div class="video">
+        <img
+          src="https://github.com/kananiyashvi180-svg/CGxSU_Semester_1/blob/main/html_css_js/CSS/00.assignment/02.level_2/08.youtube-clone/assets/Thumbnail-7.png?raw=true"
+          alt="UX Design What is it">
+        <div class="video-info">
+          <h4>|48VISA-FREE</h4>
+          
+          <p>1.7Mviews • 1 year ago </p>
+        </div>
+      </div>
+      <div class="video">
+        <img
+          src="https://github.com/kananiyashvi180-svg/CGxSU_Semester_1/blob/main/html_css_js/CSS/00.assignment/02.level_2/08.youtube-clone/assets/Thumbnail.png?raw=true"
+          alt="UX Design What is it">
+        <div class="video-info">
+          <h4>14 Advanced Tips to design FASTER in Figma </h4>
+          <p>Mizko</p>
+          <p>53K views • 1 year ago</p>
+        </div>
+      </div>
+      <div class="video">
+        <img
+          src="https://github.com/kananiyashvi180-svg/CGxSU_Semester_1/blob/main/html_css_js/CSS/00.assignment/02.level_2/08.youtube-clone/assets/Thumbnail-1.png?raw=true"
+          alt="UX Design What is it">
+        <div class="video-info">
+          <h4>UX Design - What is it?</h4>
+          <p>139K views • 3 years ago</p>
+        </div>
+      </div>
+      <div class="video">
+        <img
+          src="https://github.com/kananiyashvi180-svg/CGxSU_Semester_1/blob/main/html_css_js/CSS/00.assignment/02.level_2/08.youtube-clone/assets/Thumbnail-2.png?raw=true"
+          alt="UX Design What is it">
+        <div class="video-info">
+          <h4>UX Design - What is it?</h4>
+          <p>139K views • 3 years ago</p>
+        </div>
+      </div>
+      <div class="video">
+        <img
+          src="https://github.com/kananiyashvi180-svg/CGxSU_Semester_1/blob/main/html_css_js/CSS/00.assignment/02.level_2/08.youtube-clone/assets/Thumbnail-3.png?raw=true"
+          alt="UX Design What is it">
+        <div class="video-info">
+          <h4>UX Design - What is it?</h4>
+          <p>139K views • 3 years ago</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>

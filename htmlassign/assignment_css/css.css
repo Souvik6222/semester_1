@@ -1,70 +1,28 @@
-/* ===============================
-   Assignment 1 — CSS Selectors
-   =============================== */
-
-/* 1. Element selector: Style all <p> tags */
-p {
-  font-size: 16px;
-  line-height: 1.6;
-  font-family: 'Roboto', sans-serif;
+p{
+  font-size: small;
+  line-height: 10%;
 }
 
-/* 2. ID selector: #site-title */
-#site-title {
-  background: #222;
-  color: white;
-  padding: 20px;
+#site-title{
+  background-color: aqua;
   text-align: center;
+  text-shadow: 1px 1px 2px #000;
+  color: rgb(233, 14, 14);
+  padding: 15px;
 }
 
-/* 3. Class selectors */
-.muted {
+.muted{
   color: gray;
 }
-
-.highlight {
-  background: #fffa9c;
-  border: 2px solid gold;
-  padding: 5px;
+.highlight{
+background-color: blue;
+border: 2px solid black;
 }
 
-.highlight-text {
-  background: lightblue;
-  padding: 5px;
+.highlight-text{
+background-color: rgb(125, 125, 190);
 }
 
-#override {
-  background: yellow; /* Overrides .highlight-text */
-}
-
-/* 4. Descendant & Child selectors */
-section > h4 {
-  color: darkgreen;
-  font-weight: bold;
-}
-
-section p {
-  color: #444;
-  font-style: italic;
-}
-
-/* 5. Adjacent sibling selector */
-h4 + p {
-  background: #f0f8ff;
-  padding: 8px;
-  border-left: 4px solid blue;
-}
-
-/* 6. Attribute selector: only images with alt */
-img[alt] {
-  border: 3px solid #555;
-}
-
-/* 7. nth-child selector for striped list */
-.striped-list li:nth-child(odd) {
-  background: #f9f9f9;
-}
-
-.striped-list li:nth-child(even) {
-  background: #e0e0e0;
+#override  {
+  background-color: rgb(211, 233, 14);
 }
